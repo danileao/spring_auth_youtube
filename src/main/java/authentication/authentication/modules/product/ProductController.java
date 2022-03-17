@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 import authentication.authentication.modules.product.entities.Product;
 import authentication.authentication.modules.product.services.ListProductService;
 
-import org.springframework.web.bind.annotation.RequestParam;
-
 @RestController
 @RequestMapping("/products")
 public class ProductController {
@@ -20,7 +18,7 @@ public class ProductController {
   ListProductService listProductService;
 
   @GetMapping
-  public List<Product> getMethodName() {
+  public List<Product> list() {
     return listProductService.listAll();
   }
 
